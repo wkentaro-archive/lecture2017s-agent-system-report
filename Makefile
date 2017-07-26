@@ -36,5 +36,6 @@ wipe: clean
 	git clean -X -f -i -e '.tex'
 
 preinstall:
+	mkdir -p figs src
 	@if ! which omake > /dev/null; then $(OMAKE_INSTALL); fi
 	@if ! which platex > /dev/null; then $(TEX_INSTALL); fi
